@@ -191,7 +191,7 @@ def create_fig(depth):
     plt.close()
     rvg = RandomVariableGenerator(f,b_inf, b_sup)
     rvg.create_milestones(depth=depth)
-    plt.hist([rvg.get_sample() for _ in range(int(1e6))], bins=100, color='blue', edgecolor='black', density=True)
+    plt.hist([rvg.get_sample() for _ in range(int(1e6))], bins=1000, color='blue', edgecolor='black', density=True)
     plt.savefig(str(depth)+'.jpg', format='jpg')
     return 1
 
